@@ -10,20 +10,20 @@ This program is WIP and many things are currently hardcoded, it might not work o
 
 Installation (Tested on Arch Linux)
 --------------
-
-```git clone https://github.com/haxalicious/composer-island-bot.git
+```
+git clone https://github.com/haxalicious/composer-island-bot.git
 cd composer-island-bot
 ./setup.py
 ```
 
 Usage
 --------------
-## Converting Video
+### Converting Video
 Edit the FFmpeg command in vconv.py with your correct file names, framerate and resolution. Framerate is determined by (song BPM * 2 / 60).  
 Run 
 ```./vconv.py```
 
-## Importing Video
+### Importing Video
  - Edit config options in vimport.py. You need to adjust everything under "config values", X and Y coordinates can be obtained using something like GIMP from a screenshot.
  - Configuring X and Y coordinates for pixels only needs to be done once.
 Open the Compose UI in-game, then run:
