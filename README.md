@@ -3,7 +3,7 @@ Composer Island Bot
 
 Description
 --------------
-This repository currently includes one script, to import video files into My Singing Monsters as Glowbe animations.
+This repository currently includes one script, to import video files into My Singing Monsters™ as Glowbe animations.
 In the future there may be other scripts for importing songs from various sources.
 For the video script, it is highly recommended to name your Glowbes with cartesian coordinates, with 0,0 being the bottom left.
 This program is WIP and many things are currently hardcoded, it might not work on your system due to different aspect ratios.
