@@ -19,15 +19,16 @@ cd composer-island-bot
 Usage
 --------------
 ### Converting Video
-Edit the FFmpeg command in vconv.py with your correct file names, framerate and resolution. Framerate is determined by (song BPM * 2 / 60).  
+Edit the FFmpeg command in vconv.py with your correct file names, framerate and resolution.  
+Framerate is determined by (song BPM * 2 / 60).  
 Run 
 ```./vconv.py```
 
 ### Importing Video
  - Edit config options in vimport.py. You need to adjust everything under "config values", X and Y coordinates can be obtained using something like GIMP from a screenshot.
  - Configuring X and Y coordinates for pixels only needs to be done once.
-Open the Compose UI in-game, then run:
-```./vimport.py```
+Open the Compose UI in-game, then run:  
+```./vimport.py```  
 Enter the coords for the Glowbe you want. The script will automate the inputs required.
 
 Disclaimer
