@@ -3,13 +3,14 @@ Composer Island Bot
 
 Description
 --------------
-This repository currently includes one script, to import video files into My Singing Monsters™ as Glowbe animations.
-In the future there may be other scripts for importing songs from various sources.
-For the video script, it is highly recommended to name your Glowbes with cartesian coordinates, with 0,0 being the bottom left.
-This program is WIP and many things are currently hardcoded, it might not work on your system due to different aspect ratios.
+This repository currently includes one script, to import video files into My Singing Monsters™ as Glowbe animations.  
+In the future there may be other scripts for importing songs from various sources.  
+For the video script, it is highly recommended to name your Glowbes with cartesian coordinates, with 0,0 being the bottom left.  
+This program is WIP and many things are currently hardcoded, it might not work on your system due to different aspect ratios.  
 
 Installation (Tested on Arch Linux)
 --------------
+
 ```git clone https://github.com/haxalicious/composer-island-bot.git
 cd composer-island-bot
 ./setup.py
@@ -18,8 +19,8 @@ cd composer-island-bot
 Usage
 --------------
 ## Converting Video
-Edit the FFmpeg command in vconv.py with your correct file names, framerate and resolution. Framerate is determined by (song BPM * 2 / 60).
-Run:
+Edit the FFmpeg command in vconv.py with your correct file names, framerate and resolution. Framerate is determined by (song BPM * 2 / 60).  
+Run 
 ```./vconv.py```
 
 ## Importing Video
