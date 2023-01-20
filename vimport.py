@@ -6,15 +6,13 @@ import random
 import time
 
 def click(x, y):
-    pyautogui.moveTo(x, y)
-    pyautogui.click()
+    pyautogui.click(x, y)
     print("click {0}, {1}".format(str(x), str(y)))
 
 def drag(x0, x1, y):
-    pyautogui.moveTo(x0, y)
-    pyautogui.click()
-    time.sleep(random.uniform(0.03, 0.06))
-    pyautogui.dragTo(x1, y, random.uniform(0.15, 0.25), pyautogui.easeOutQuad, button='left')
+    pyautogui.click(x0, y)
+    time.sleep(random.uniform(0.02, 0.04))
+    pyautogui.dragTo(x1, y, random.uniform(0.1, 0.2), pyautogui.easeOutQuad, button='left')
 
 def compose(x, y):
     # Config values
@@ -45,7 +43,7 @@ def compose(x, y):
     frames = np.flip(frames, 0)
     pixel = frames[y][x]
 
-    x = xstart + xstep * 4  # Initialize vars
+    x = xstart + xstep * 4   # Initialize vars
     xdrag = x
 
     click(accidentalbutton_x, accidentalbutton_y)
@@ -60,8 +58,8 @@ def compose(x, y):
             if xdrag < x - xstep:
                 drag(xdrag, x - xstep, y)
             else:
-                click(xdrag, y)
-                time.sleep(random.uniform(0.025, 0.05))
+                pg.click(xdrag, y)
+                time.sleep(random.uniform(0.02, 0.05))
             click(nextbutton_x, nextbutton_y)
             x = xstart
             xdrag = xstart
@@ -81,6 +79,7 @@ def compose(x, y):
                 click(xdrag, y)
             elif x != xstart:
                 drag(xdrag, x - xstep, y)
+            time.sleep(random.uniform(0.02, 0.05))
             xdrag = x
             y = ynext
 
@@ -90,7 +89,7 @@ def compose(x, y):
                     drag(xdrag, x, y)
                 else:
                     click(xdrag, y)
-                    time.sleep(random.uniform(0.025, 0.05))
+                time.sleep(random.uniform(0.02, 0.05))
                 click(exitbutton_x, exitbutton_y)
                 time.sleep(random.uniform(0.5, 0.7))
                 click(confirmbutton_x, confirmbutton_y)
@@ -102,7 +101,7 @@ def compose(x, y):
                     drag(xdrag, x, y)
                 else:
                     click(xdrag, y)
-                    time.sleep(random.uniform(0.025, 0.05))
+                time.sleep(random.uniform(0.02, 0.05))
                 click(nextbutton_x, nextbutton_y)
                 x = xstart
                 xdrag = xstart
