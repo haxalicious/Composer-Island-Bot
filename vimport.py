@@ -79,7 +79,7 @@ def compose(x, y):
         if y != ynext:  # Input note
             if xdrag == x - xstep:
                 click(xdrag, y)
-            else:
+            elif x != xstart:
                 drag(xdrag, x - xstep, y)
             xdrag = x
             y = ynext
