@@ -6,13 +6,14 @@ import random
 import time
 
 def click(x, y):
-    pyautogui.click(x, y)
+    pyautogui.click(x + random.randint(-8, 0), y + random.randint(-5, 5))
     print("click {0}, {1}".format(str(x), str(y)))
 
 def drag(x0, x1, y):
-    pyautogui.click(x0, y)
-    time.sleep(random.uniform(0.02, 0.04))
-    pyautogui.dragTo(x1, y, random.uniform(0.1, 0.2), pyautogui.easeOutQuad, button='left')
+    click(x0, y)
+    time.sleep(random.uniform(0.02, 0.05))
+    pyautogui.dragTo(x1 + random.randint(-8, 0), y + random.randint(-5, 5), random.uniform(0.1, 0.2), pyautogui.easeOutQuad, button='left')
+    print("drag from {0}, {2} to {1}, {2}".format(str(x0), str(x1), str(y)))
 
 def compose(x, y):
     # Config values
@@ -43,7 +44,7 @@ def compose(x, y):
     frames = np.flip(frames, 0)
     pixel = frames[y][x]
 
-    x = xstart + xstep * 4   # Initialize vars
+    x = xstart + xstep * 4  # Initialize vars
     xdrag = x
 
     click(accidentalbutton_x, accidentalbutton_y)
@@ -58,7 +59,7 @@ def compose(x, y):
             if xdrag < x - xstep:
                 drag(xdrag, x - xstep, y)
             else:
-                pg.click(xdrag, y)
+                click(xdrag, y)
                 time.sleep(random.uniform(0.02, 0.05))
             click(nextbutton_x, nextbutton_y)
             x = xstart
