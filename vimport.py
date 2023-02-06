@@ -12,30 +12,30 @@ def click(x, y):
 def drag(x0, x1, y):
     click(x0, y)
     time.sleep(random.uniform(0.02, 0.05))
-    pyautogui.dragTo(x1 + random.randint(-8, 0), y + random.randint(-5, 5), random.uniform(0.1, 0.2), pyautogui.easeOutQuad, button='left')
+    pyautogui.dragTo(x1 + random.randint(-8, 0), y + random.randint(-4, 4), random.uniform(0.1, 0.2), pyautogui.easeOutQuad, button='left')
     print("drag from {0}, {2} to {1}, {2}".format(str(x0), str(x1), str(y)))
 
 def compose(x, y):
     # Config values
     file = 'example.gif'  # Path to GIF
-    xstart = 119  # X coord of the farthest right point inside the leftmost note
-    xstep = 122  # Pixel count between notes
+    xstart = 129  # X coord of the farthest right point inside the leftmost note
+    xstep = 128  # Pixel count between notes
     xmax = xstart + xstep * 13  # Max note coord, likely no need to change
-    y0 = 369  # Y coord for low B
-    y1 = 536  # Y coord for low B
-    y2 = 600  # Y coord for high F
+    y0 = 729  # Y coord for low B
+    y1 = 647  # Y coord for low E
+    y2 = 431  # Y coord for high F
     color_white = 255  # Red value for white, get this from vconv.py
     color_black = 8  # Red value for black, get this from vconv.py
-    nextbutton_x = 1615  # X and Y coords for the next screen arrow
-    nextbutton_y = 662
-    accidentalbutton_x = 1250  # X and Y coords for the accidental button
-    accidentalbutton_y = 100
-    exitbutton_x = 1646
-    exitbutton_y = 777
-    confirmbutton_x = 624  # X and Y coords for the checkbox on the save confirmation dialog
-    confirmbutton_y = 681
-    successbutton_x = 912  # X and Y coords for the checkbox on the save successful dialog
-    successbutton_y = 687
+    nextbutton_x = 1712  # X and Y coords for the next screen arrow
+    nextbutton_y = 876
+    accidentalbutton_x = 1354  # X and Y coords for the accidental button
+    accidentalbutton_y = 68
+    exitbutton_x = 1739
+    exitbutton_y = 985
+    confirmbutton_x = 634  # X and Y coords for the checkbox on the save confirmation dialog
+    confirmbutton_y = 764
+    successbutton_x = 957  # X and Y coords for the checkbox on the save successful dialog
+    successbutton_y = 747
 
     # Generate an array from GIF, extract RGB data for a single pixel
     img = Image.open(file)
