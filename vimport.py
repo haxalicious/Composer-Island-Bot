@@ -21,9 +21,9 @@ def compose(x, y):
     xstart = 129  # X coord of the farthest right point inside the leftmost note
     xstep = 128  # Pixel count between notes
     xmax = xstart + xstep * 13  # Max note coord, likely no need to change
-    y0 = 729  # Y coord for low B
+    y0 = 431  # Y coord for high F
     y1 = 647  # Y coord for low E
-    y2 = 431  # Y coord for high F
+    y2 = 729  # Y coord for low B
     color_white = 255  # Red value for white, get this from vconv.py
     color_black = 8  # Red value for black, get this from vconv.py
     nextbutton_x = 1712  # X and Y coords for the next screen arrow
