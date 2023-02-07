@@ -18,7 +18,7 @@ def drag(x0, x1, y):
 def compose(x, y):
     # Config values
     file = 'example.gif'  # Path to GIF
-    xstart = 129  # X coord of the farthest right point inside the leftmost note
+    xstart = 128  # X coord of the farthest right point inside the leftmost note
     xstep = 128  # Pixel count between notes
     xmax = xstart + xstep * 13  # Max note coord, likely no need to change
     y0 = 431  # Y coord for high F
