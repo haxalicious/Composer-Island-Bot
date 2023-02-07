@@ -55,7 +55,7 @@ def compose(x, y):
     for i in range(512):
         print("processing frame {0}".format(str(i)))
 
-        if i == 497:  # Workaround for end
+        if i == 498:  # Workaround for end
             if xdrag < x - xstep:
                 drag(xdrag, x - xstep, y)
             else:
