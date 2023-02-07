@@ -11,8 +11,8 @@ def click(x, y):
 
 def drag(x0, x1, y):
     click(x0, y)
-    time.sleep(random.uniform(0.02, 0.05))
-    pyautogui.dragTo(x1 + random.randint(-8, 0), y + random.randint(-4, 4), random.uniform(0.1, 0.2), pyautogui.easeOutQuad, button='left')
+    time.sleep(random.uniform(0.05, 0.1))
+    pyautogui.dragTo(x1 + random.randint(-6, 0), y + random.randint(-3, 3), random.uniform(0.15, 0.3), pyautogui.easeOutQuad, button='left')
     print("drag from {0}, {2} to {1}, {2}".format(str(x0), str(x1), str(y)))
 
 def compose(x, y):
@@ -48,7 +48,7 @@ def compose(x, y):
     xdrag = x
 
     click(accidentalbutton_x, accidentalbutton_y)
-    time.sleep(random.uniform(0.05, 0.1))
+    time.sleep(random.uniform(0.1, 0.2))
     click(accidentalbutton_x, accidentalbutton_y)
     time.sleep(random.uniform(0.075, 0.15))
 
@@ -60,11 +60,11 @@ def compose(x, y):
                 drag(xdrag, x - xstep, y)
             else:
                 click(xdrag, y)
-                time.sleep(random.uniform(0.02, 0.05))
+                time.sleep(random.uniform(0.05, 0.1))
             click(nextbutton_x, nextbutton_y)
             x = xstart
             xdrag = xstart
-            time.sleep(random.uniform(0.075, 0.15))
+            time.sleep(random.uniform(0.1, 0.2))
 
         if pixel[i][0] == color_white:  # Set Y value
             ynext = y0
@@ -80,7 +80,7 @@ def compose(x, y):
                 click(xdrag, y)
             elif x != xstart:
                 drag(xdrag, x - xstep, y)
-            time.sleep(random.uniform(0.02, 0.05))
+            time.sleep(random.uniform(0.05, 0.1))
             xdrag = x
             y = ynext
 
@@ -90,7 +90,7 @@ def compose(x, y):
                     drag(xdrag, x, y)
                 else:
                     click(xdrag, y)
-                time.sleep(random.uniform(0.02, 0.05))
+                time.sleep(random.uniform(0.05, 0.1))
                 click(exitbutton_x, exitbutton_y)
                 time.sleep(random.uniform(0.5, 0.7))
                 click(confirmbutton_x, confirmbutton_y)
@@ -102,11 +102,11 @@ def compose(x, y):
                     drag(xdrag, x, y)
                 else:
                     click(xdrag, y)
-                time.sleep(random.uniform(0.02, 0.05))
+                time.sleep(random.uniform(0.05, 0.1))
                 click(nextbutton_x, nextbutton_y)
                 x = xstart
                 xdrag = xstart
-                time.sleep(random.uniform(0.075, 0.15))
+                time.sleep(random.uniform(0.1, 0.2))
         else:
             x += xstep
 
