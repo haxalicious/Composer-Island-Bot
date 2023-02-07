@@ -13,7 +13,7 @@ Installation (Tested on Arch Linux)
 ```
 git clone https://github.com/haxalicious/composer-island-bot.git
 cd composer-island-bot
-./setup.py
+pip install -r requirements.txt
 ```
 
 Usage
